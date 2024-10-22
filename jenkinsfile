@@ -8,7 +8,7 @@ stage('Cloning Git') {
 stage('Build-and-Tag') {
     /* Build image and  
     |   * This is synonymous to docker build on the command line*/
-    app.docker.build('Lenaleu/carwebsite')
+    app = docker.build('Lenaleu/carwebsite')
 }
 stage('Post-to-dockerhub')
 {
