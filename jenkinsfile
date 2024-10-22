@@ -1,0 +1,22 @@
+nodenode('appserver')
+
+def app
+
+stage('Cloning Git') {
+    /* Make sure we have a repo to checkout */
+}
+
+stage('Build-and-Tag') {
+    /* Build image and  
+    |   * This is synonymous to docker build on the command line*/
+    app.docker.build('Lenaleu/carwebsite')
+}
+stage('Post-to-dockerhub')
+{
+    docker.withRegistry('https://registry.hub.docker.com', 'docker_credentials')
+}
+stage('Deploy')
+{
+    sh "docker-compose down"
+    sh "docker-compose up -d"
+}
