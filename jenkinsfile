@@ -1,4 +1,4 @@
-nodenode('appserver')
+node('appserver')
 
 def app
 
