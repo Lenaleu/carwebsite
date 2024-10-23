@@ -1,7 +1,7 @@
 version: '2.4'
 services:
  apache:
-   image: 'grimleng/carweb_repo'
+   image: 'grimleng/carwebsite'
    ports:
    - '80:80'
    volumes:
