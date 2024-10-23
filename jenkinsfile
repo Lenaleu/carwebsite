@@ -13,7 +13,7 @@ stage('Build-and-Tag') {
 }
 stage('Post-to-dockerhub')
 {
-    docker.withRegistry('https://registry.hub.docker.com', 'docker_credentials')
+    docker.withRegistry('https://registry.hub.docker.com', 'dockercredentials')
     {
         app.push('latest')
 }
